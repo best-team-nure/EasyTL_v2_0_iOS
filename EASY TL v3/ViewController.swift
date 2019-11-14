@@ -105,28 +105,54 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var questionText: UITextView!
     
+    @IBOutlet weak var arrow1: UIImageView!
+    @IBOutlet weak var arrow2: UIImageView!
+    @IBOutlet weak var arrow3: UIImageView!
+    @IBOutlet weak var arrow4: UIImageView!
+    @IBOutlet weak var arrow5: UIImageView!
+    
+    func setInactive() {
+        arrow1.image = UIImage(named: "inactive")
+        arrow2.image = UIImage(named: "inactive")
+        arrow3.image = UIImage(named: "inactive")
+        arrow4.image = UIImage(named: "inactive")
+        arrow5.image = UIImage(named: "inactive")
+    }
     
     @IBAction func button1(_ sender: Any) {
+        setInactive()
+        arrow1.image = UIImage(named: "active")
+        questionText.isEditable = false
         questionText.text = "Нажать кнопку старт, прочитать теорию и начать проходить тест по пункту теории. Также вы можете пройти тест из 20 случайных вопросов нажав на кнопку \"Быстрый тест\""
     }
     
-    @IBOutlet weak var arrow1: UIImageView!
-    
     @IBAction func button2(_ sender: Any) {
+        setInactive()
+        arrow2.image = UIImage(named: "active")
+        questionText.isEditable = false
         questionText.text = "Регистрация нужна для статистики, то есть для  сохранения результатов теста.\n Вы также сможете поделиться своими результатами с друзьями."
     }
     
     
     @IBAction func button3(_ sender: Any) {
+        setInactive()
+        arrow3.image = UIImage(named: "active")
+        questionText.isEditable = false
         questionText.text = "Результат сохраняется автоматически, если вы авторизовались."
     }
     
     
     @IBAction func button4(_ sender: Any) {
+        setInactive()
+        arrow4.image = UIImage(named: "active")
+        questionText.isEditable = false
          questionText.text = "Нажимаете на кнопку \"Поделиться\" в профиле и выбираете нужную вам соцсеть."
     }
     
     @IBAction func button5(_ sender: Any) {
+        setInactive()
+        arrow5.image = UIImage(named: "active")
+        questionText.isEditable = false
         questionText.text = "За прохождения теста, соответствующего пункту теории без ошибок, вы получите одну звезду. \n Звезды нельзя купить, только заработать."
     }
     
