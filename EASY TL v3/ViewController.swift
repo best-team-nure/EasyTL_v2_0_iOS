@@ -156,6 +156,12 @@ class ViewController: UIViewController {
         questionText.text = "За прохождения теста, соответствующего пункту теории без ошибок, вы получите одну звезду. \n Звезды нельзя купить, только заработать."
     }
     
+    @IBOutlet weak var answersQuickTest: UITextView!
+    
+    @IBAction func toTheoryTest(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
