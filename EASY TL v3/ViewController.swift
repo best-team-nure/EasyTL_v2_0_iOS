@@ -21,7 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var topicHeader: UILabel!
     @IBOutlet weak var header: UILabel!
     
+    @IBOutlet weak var toTest: UIButton!
     @IBOutlet weak var topic: UITextView!
+    @IBOutlet weak var gifView: UIImageView!
     
     func buttonsHide(){
         header.isHidden = true
@@ -39,6 +41,7 @@ class ViewController: UIViewController {
         topic.isEditable = false
         topic.isScrollEnabled = true
         backButton.isHidden = false
+        toTest.isHidden = false
     }
     
     @IBAction func handle1Click(_ sender: Any) {
@@ -92,6 +95,7 @@ class ViewController: UIViewController {
         topicHeader.isHidden = true
         topic.isHidden = true
         backButton.isHidden = true
+        toTest.isHidden = true
         
         
      header.isHidden = false
@@ -156,11 +160,14 @@ class ViewController: UIViewController {
         questionText.text = "За прохождения теста, соответствующего пункту теории без ошибок, вы получите одну звезду. \n Звезды нельзя купить, только заработать."
     }
     
-    @IBOutlet weak var answersQuickTest: UITextView!
+    
     
     @IBAction func toTheoryTest(_ sender: Any) {
-        
+        //gifView.loadGif(name: "q0.gif")
     }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

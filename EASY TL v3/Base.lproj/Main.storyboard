@@ -269,12 +269,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OO-u2-TYt" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="912"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="398-nv-4YS">
-                                                <rect key="frame" x="87" y="98" width="240" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="CMO-WH-Xua"/>
-                                                </constraints>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-Uc-01B">
                                                 <rect key="frame" x="184" y="704" width="46" height="30"/>
                                                 <state key="normal" title="Button"/>
@@ -285,16 +279,22 @@
                                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="398-nv-4YS">
+                                                <rect key="frame" x="57" y="96" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="CMO-WH-Xua"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="398-nv-4YS" firstAttribute="centerX" secondItem="Z3t-qw-OP7" secondAttribute="centerX" id="2bd-3Z-biP"/>
-                                            <constraint firstAttribute="trailing" secondItem="398-nv-4YS" secondAttribute="trailing" constant="87" id="9WD-tS-u0P"/>
+                                            <constraint firstItem="398-nv-4YS" firstAttribute="centerX" secondItem="Z3t-qw-OP7" secondAttribute="centerX" constant="-0.25" id="2bd-3Z-biP"/>
+                                            <constraint firstAttribute="trailing" secondItem="398-nv-4YS" secondAttribute="trailing" constant="57" id="9WD-tS-u0P"/>
                                             <constraint firstAttribute="bottom" secondItem="Z3t-qw-OP7" secondAttribute="bottom" constant="76" id="HPd-Ai-WSI"/>
                                             <constraint firstItem="398-nv-4YS" firstAttribute="centerX" secondItem="u7Q-Uc-01B" secondAttribute="centerX" id="KzF-6s-31z"/>
                                             <constraint firstItem="Z3t-qw-OP7" firstAttribute="top" secondItem="u7Q-Uc-01B" secondAttribute="bottom" constant="78" id="Qp5-rn-45w"/>
-                                            <constraint firstItem="398-nv-4YS" firstAttribute="top" secondItem="9OO-u2-TYt" secondAttribute="top" constant="98" id="iMw-sN-TP0"/>
-                                            <constraint firstItem="398-nv-4YS" firstAttribute="leading" secondItem="9OO-u2-TYt" secondAttribute="leading" constant="87" id="zav-k6-Gxv"/>
+                                            <constraint firstItem="398-nv-4YS" firstAttribute="top" secondItem="9OO-u2-TYt" secondAttribute="top" constant="96" id="iMw-sN-TP0"/>
+                                            <constraint firstItem="398-nv-4YS" firstAttribute="leading" secondItem="9OO-u2-TYt" secondAttribute="leading" constant="57" id="zav-k6-Gxv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -326,6 +326,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Ex-8Z-Eon"/>
                     <size key="freeformSize" width="414" height="1000"/>
+                    <connections>
+                        <outlet property="gifView" destination="398-nv-4YS" id="N3e-Xu-oSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rc3-pw-AF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -521,6 +524,7 @@
                         <outlet property="b6" destination="VhK-Ws-aYb" id="YdM-xg-tIH"/>
                         <outlet property="backButton" destination="QY2-ll-E3x" id="C19-HC-6sr"/>
                         <outlet property="header" destination="KBS-TN-Gs5" id="fKC-eQ-ot0"/>
+                        <outlet property="toTest" destination="k8C-gv-arS" id="eoR-M7-kUD"/>
                         <outlet property="topic" destination="LgT-1C-sfR" id="xCe-7a-3hQ"/>
                         <outlet property="topicHeader" destination="qny-7D-3FG" id="BhO-Fc-woz"/>
                         <outlet property="view" destination="uA9-6g-FUX" id="cCP-kA-o1o"/>

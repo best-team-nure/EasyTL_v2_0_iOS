@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE28661A2376D77700780369 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2866192376D77700780369 /* TopicViewController.swift */; };
+		CE316CC623886D2A007AC192 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE316CC523886D2A007AC192 /* Swift+Gif.swift */; };
+		CE316CCA23887081007AC192 /* q0.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE316CC923887081007AC192 /* q0.gif */; };
 		CE328549233CB2B400A7644B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE328548233CB2B400A7644B /* AppDelegate.swift */; };
 		CE32854B233CB2B400A7644B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32854A233CB2B400A7644B /* SceneDelegate.swift */; };
 		CE32854D233CB2B400A7644B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE32854C233CB2B400A7644B /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		CE2866192376D77700780369 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		CE316CC523886D2A007AC192 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
+		CE316CC923887081007AC192 /* q0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = q0.gif; sourceTree = "<group>"; };
 		CE328545233CB2B400A7644B /* EASY TL v3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EASY TL v3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE328548233CB2B400A7644B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE32854A233CB2B400A7644B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +67,10 @@
 				CE32854C233CB2B400A7644B /* ViewController.swift */,
 				CE328553233CB2B600A7644B /* LaunchScreen.storyboard */,
 				CE32854E233CB2B400A7644B /* Main.storyboard */,
+				CE316CC523886D2A007AC192 /* Swift+Gif.swift */,
 				CE2866192376D77700780369 /* TopicViewController.swift */,
 				CE328551233CB2B600A7644B /* Assets.xcassets */,
+				CE316CC923887081007AC192 /* q0.gif */,
 				CE328556233CB2B600A7644B /* Info.plist */,
 			);
 			path = "EASY TL v3";
@@ -131,6 +137,7 @@
 				CE328555233CB2B600A7644B /* LaunchScreen.storyboard in Resources */,
 				CE328552233CB2B600A7644B /* Assets.xcassets in Resources */,
 				CE328550233CB2B400A7644B /* Main.storyboard in Resources */,
+				CE316CCA23887081007AC192 /* q0.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +152,7 @@
 				CE328549233CB2B400A7644B /* AppDelegate.swift in Sources */,
 				CE28661A2376D77700780369 /* TopicViewController.swift in Sources */,
 				CE32854B233CB2B400A7644B /* SceneDelegate.swift in Sources */,
+				CE316CC623886D2A007AC192 /* Swift+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
