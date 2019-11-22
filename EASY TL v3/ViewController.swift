@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var topicHeader: UILabel!
     @IBOutlet weak var header: UILabel!
     
+    @IBOutlet weak var startTest: UIButton!
     @IBOutlet weak var toTest: UIButton!
     @IBOutlet weak var topic: UITextView!
     @IBOutlet weak var gifView: UIImageView!
@@ -167,6 +168,14 @@ class ViewController: UIViewController {
     }
     
     
+    let i = 0
+    
+    @IBAction func startTest(_ sender: Any) {
+        gifView.isHidden = false
+        gifView.loadGif(name: "q0")
+        startTest.isHidden = true
+        
+    }
     
     
     override func viewDidLoad() {

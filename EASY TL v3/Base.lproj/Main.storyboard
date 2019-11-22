@@ -269,22 +269,30 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OO-u2-TYt" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="912"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-Uc-01B">
-                                                <rect key="frame" x="184" y="704" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="EASY TL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3t-qw-OP7">
                                                 <rect key="frame" x="166" y="812" width="82.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="398-nv-4YS">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="398-nv-4YS">
                                                 <rect key="frame" x="57" y="96" width="300" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" id="CMO-WH-Xua"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-Uc-01B">
+                                                <rect key="frame" x="90" y="423" width="234" height="48"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="30"/>
+                                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Старт">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startTest:" destination="Wgk-XF-tuv" eventType="touchUpInside" id="K6L-Vh-fYV"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -292,8 +300,10 @@
                                             <constraint firstAttribute="trailing" secondItem="398-nv-4YS" secondAttribute="trailing" constant="57" id="9WD-tS-u0P"/>
                                             <constraint firstAttribute="bottom" secondItem="Z3t-qw-OP7" secondAttribute="bottom" constant="76" id="HPd-Ai-WSI"/>
                                             <constraint firstItem="398-nv-4YS" firstAttribute="centerX" secondItem="u7Q-Uc-01B" secondAttribute="centerX" id="KzF-6s-31z"/>
-                                            <constraint firstItem="Z3t-qw-OP7" firstAttribute="top" secondItem="u7Q-Uc-01B" secondAttribute="bottom" constant="78" id="Qp5-rn-45w"/>
+                                            <constraint firstItem="Z3t-qw-OP7" firstAttribute="top" secondItem="u7Q-Uc-01B" secondAttribute="bottom" constant="341" id="Qp5-rn-45w"/>
+                                            <constraint firstItem="u7Q-Uc-01B" firstAttribute="leading" secondItem="9OO-u2-TYt" secondAttribute="leading" constant="90" id="XZf-Va-PUv"/>
                                             <constraint firstItem="398-nv-4YS" firstAttribute="top" secondItem="9OO-u2-TYt" secondAttribute="top" constant="96" id="iMw-sN-TP0"/>
+                                            <constraint firstAttribute="trailing" secondItem="u7Q-Uc-01B" secondAttribute="trailing" constant="90" id="nBo-8Q-zIM"/>
                                             <constraint firstItem="398-nv-4YS" firstAttribute="leading" secondItem="9OO-u2-TYt" secondAttribute="leading" constant="57" id="zav-k6-Gxv"/>
                                         </constraints>
                                     </view>
@@ -328,6 +338,7 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="gifView" destination="398-nv-4YS" id="N3e-Xu-oSH"/>
+                        <outlet property="startTest" destination="u7Q-Uc-01B" id="2TU-FK-CAy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rc3-pw-AF6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
