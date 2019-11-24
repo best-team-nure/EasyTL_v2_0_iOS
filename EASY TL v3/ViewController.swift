@@ -45,11 +45,13 @@ class ViewController: UIViewController {
         toTest.isHidden = false
     }
     
+    var topicNum: Int = 0
+    
     @IBAction func handle1Click(_ sender: Any) {
         buttonsHide()
         topicAppear()
-    
-        let topicNum = 1;
+        topicNum = 1;
+        print(topicNum)
         topicHeader.text = "Начало движения"
         topic.text = "Всегда делай это: \n -убедись, что твои действия будут безопасны и не создадут препятствий или опасности другим участникам движения (вообще всегда, не только в вождении)!\n -не будь глупцом, уступи дорогу пешеходам и транспортным средствам при выезде из жилой зоны, дворов, мест стоянки! \nсъезжая же с дороги уступи дорогу велосипедистам и пешеходам, направление движения которых ты пересекаешь!\n -если из пункта 2 и 3 не понятно, то знай - придется уступать дорогу, и при перестроении тем машинам, что движутся в попутном направлении по той полосе, на которую ты намерен перестроиться - тоже:)\n -поворачиваешь? даже если это “поворот не туда” - заблаговременно займи соответствующее крайнее положение на проезжей части, предназначенной для движения в этом направлении!\n -дорогой друг, поворачивай так, чтобы при выезде с пересечения проезжих частей твоя машина не оказалась на встречке :) -выезд с перекрестка, где организованно круговое движение можешь осуществлять с любой полосы, если направление движения не определено дорожными знаками или разметкой"
     }
@@ -57,7 +59,7 @@ class ViewController: UIViewController {
     @IBAction func handle2Click(_ sender: Any) {
         buttonsHide()
         topicAppear()
-        let topicNum = 2;
+        topicNum = 2;
         topicHeader.text = "Обгон"
         topic.text = "Продолжим. Мы бы советовали прислушаться к следующим правилам обгона: \n - убедись в том, что ни один водитель за тобой не начал обгона \n - убедись в том, водитель впереди не подал сигнал поворота, встречная полоса свободна и что после обгона он сможет вернуться на свою полосу не создав препятствий обгоняемому транспортному средству \n - во время обгона можно остаться на встречной полосе, если по возвращении на свою полосу придется снова начать обгон \n - не препятствуй обгону путем повышения скорости движения или как-либо иначе! у тебя в детстве было мало грустно закончившихся гонок? :) \n - если дорожная обстановка не позволяет осуществить обгон - не геройствуй, просто двигайся как можно правее и при необходимости пропусти других участников движения!\n Не обгоняй на: \n - на перекрестке; \n - на ж/д переездах (+100 м перед ними); \n -ближе чем за 50 м перед пешеходным переходом в населенном пункте и 100 м — вне населенного пункта; \n - в конце подъема, в тоннелях, на мостах, эстакадах, путепроводах, крутых поворотах и других участках дорог с ограниченным обзором или в условиях недостаточной видимости"
     }
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
     @IBAction func handle3Click(_ sender: Any) {
         buttonsHide()
         topicAppear()
-        let topicNum = 3;
+        topicNum = 3;
         topicHeader.text = "Остановка и стоянка"
         topic.text = "Ого! Ну ты прямо бьешь рекорды по темам! \n Сейчас будем замедляться и говорить о стоянке. \n Помни:\n - останавливайся только в специально отведенных для этого местах; \n - если ты не нашел таких мест - можешь остановиться возле правого края проезжей части; \n - можешь останавливаться и на левой стороне дороги с ОДНОСТОРОННИМ движением; \n- мы бы не советовали останавливаться у разделительной полосы; \n - можешь поставить свой суперкар под углом к краю проезжей части там, где  это не будет препятствовать движению других транспортных средств. \n - не провоцируй органы, не становись во втором ряду на проезжей части; \n - возле тротуаров или других мест с пешеходным движением ставить транспортные средства под углом разрешается только передней частью, а на подъемах - только задней частью; \n - можешь остановиться слева на трамвайной колее только для выполнения правил ПДД; \n - а вот на колее справа на проезжей части еще и для посадки или высадки пассажиров; \n\n НЕТ ОСТАНОВКАМ: \n на железнодорожных переездах;\n на эстакадах, мостах, путепроводах и под ними, а также в туннелях; \n на пешеходных переходах и ближе 10 м от них с обеих сторон, кроме случаев предоставления преимущества в движении; \n на перекрестках и ближе 10 м от края пересекаемой проезжей части"
     }
@@ -75,7 +77,7 @@ class ViewController: UIViewController {
     @IBAction func handle4click(_ sender: Any) {
         buttonsHide()
         topicAppear()
-        let topicNum = 4;
+        topicNum = 4;
         topicHeader.text = "Проезд перекрестков"
         topic.text = "Перекресток? Направо пойдешь, налево пойдешь, прямо пойдешь..\n Ой да ладно тебе, давай рулить!\n Важно:\n - перекресток, где есть светофор или регулировщик, логично, является регулируемым;\n - нерегулируемый он в случае выключения светофора или его работы в режиме мигания сигнала желтого цвета и отсут­ствия регулировщика, как ты уже мог понять;\n - всегда уступай дорогу пешеходам, да, на перекрестках тоже!\n- остановись так, чтобы светофор был в поле твоего зрения, ну а если его нет - в безопасной дистанции от тротуара и пешеходов;\n - если появилась пробка - не выезжай на перекресток, не усугубляй ситуацию!\n - уступи дорогу всем, кто завершает маневр;\n- поворачивая налево или разворачиваясь при зеле­ном сигнале основного светофора, уступи до­рогу трамваю попутного направления;\n- при повороте по стрелке светофора включенной в дополнительной секции одновременно с желтым или красным, ус­тупи дорогу транспортным средствам;\n  - при повороте по зеленой стрелке на табличке займи край­нюю правую (левую) полосу движения и уступи до­рогу транспортным средствам и пешеходам;\n - на перекрестке со свето­фором с дополнительной секцией, если ты находишься на полосе, с которой производится поворот, продолжай движение в направлении включенной стрелки, если твоя остановка препятствует повороту транспортных средств, стоящих за ним в этом ряду;"
     }
@@ -83,7 +85,7 @@ class ViewController: UIViewController {
     @IBAction func handle5Click(_ sender: Any) {
         buttonsHide()
         topicAppear()
-        let topicNum = 5;
+        topicNum = 5;
         topicHeader.text = "Проезд переходов и остановок"
         topic.text = "Не забывай об этом (если хочешь жить):\n что ж, начнем с того, что тебе придется оставить людей на пешеходном переходе в целости и сохранности. Уменьшай скорость, пропускай людей и просто читай дальше;\n а, точно: первое правило касается и регулируемых и нерегулируемых пешеходных переходов;\n  всегда держи дистанцию, цеплять своей тачкой нужно не в буквальном смысле пешеходов на переходе;\n посмотри на соседа. он останавливается на переходе? значит, он нормальный чувак. последуй его примеру, возможно, ты кого-то не видишь;\n пропусти слепых, подающих сигнал белой тростью;\n сколько раз ты видел ослов, останавливающихся на переходе за пробкой? не входи в их число! будь умнее и просто остановись до перехода;\n поступило требование остановиться? что уж поделать - остановись! \n впереди трамвай? уступи дорогу тем, кто в него садится, если посадка проводится с проезжей части - целее будешь :) дождись, когда все пешеходы войдут в трамвай! \n видишь опознавательный знак «Дети» на машине, ещё и проблесковые маячками оранжевого цвета и (или) аварийная световая сигнализация включена - уменьши скорость, никогда не знаешь, чего ожидать от детей."
     }
@@ -167,17 +169,13 @@ class ViewController: UIViewController {
     }
     
     
-    
-    @IBAction func toTheoryTest(_ sender: Any) {
-        //gifView.loadGif(name: "q0.gif")
-    }
-    
-    
     @IBOutlet weak var answerPoint1: UIImageView!
     @IBOutlet weak var answerPoint2: UIImageView!
     @IBOutlet weak var answer1But: UIButton!
     @IBOutlet weak var answer2But: UIButton!
     @IBOutlet weak var questionLab: UILabel!
+    @IBOutlet weak var nextQuestion: UIButton!
+    @IBOutlet weak var finishTest1: UILabel!
     
     func startButton(){
         startTest.isHidden = true
@@ -187,19 +185,214 @@ class ViewController: UIViewController {
         answerPoint1.isHidden = false
         answerPoint2.isHidden = false
         questionLab.isHidden = false
+        nextQuestion.isHidden = false
     }
+    
+    let Q1 = [
+        "question" : "Въезжая на дорогу по полосе разгона, водитель должен:",
+        "answer1" : "Вливаться в транспортный поток,\nуступая дорогу",
+        "answer2" : "Вливаться в транспортный поток,\nдругие водители, увидев его, должны обязательно уступить ему дорогу",
+        "index" : "0"
+    ]
+    
+    let Q2 = [
+        "question" : "Разрешено ли в данном месте опасного поворота движение задним ходом?",
+        "answer1" : "Разрешено при условии обеспечения безопасности дорожного движения",
+        "answer2" : "Запрещено",
+        "index" : "1"
+    ]
+    
+    let Q3 = [
+        "question" : "Как разъедутся транспортные средства на лесной дороге?",
+        "answer1" : "Белый автомобиль проедет первым, синий - вторым",
+        "answer2" : "Синий автомобиль проедет первым, белый - вторым",
+        "index" : "0"
+    ]
+    
+    let Q4 = [
+        "question" : "Как разъедутся транспортные средства в жилой зоне?",
+        "answer1" : "Желтый автомобиль проедет первым, серый - вторым",
+        "answer2" : "Серый автомобиль проедет первым, желтый - вторым",
+        "index" : "1"
+    ]
+    
+    let Q5 = [
+        "question" : "Вы, водитель автомобиля, выезжая с территории жилой зоны, должны уступить дорогу:",
+        "answer1" : "Автомобилю и пешеходу",
+        "answer2" : "Только автомобилю",
+        "index" : "0"
+    ]
+    
+    let Q6 = [
+        "question" : "Вы водитель серого автомобиля, решили перестроиться вправо. Ваши действия?",
+        "answer1" : "Уступите дорогу водителю белого автомобиля и выполните маневр",
+        "answer2" : "Начнете перестроение, потому что имеете преимущество перед водителем белого автомобиля",
+        "index" : "0"
+    ]
+    
+    var currentQuestionInt = 0
+    var rightQs = 0
     
     @IBAction func startTest(_ sender: Any) {
         startButton()
         let gifname = "q0"
         gifView.loadGif(name: gifname)
-        
+        questionLab.text = Q1["question"]
+        answer1But.setTitle(Q1["answer1"], for: .normal)
+        answer2But.setTitle(Q1["answer2"], for: .normal)
     }
     
+    
     @IBAction func answer1Click(_ sender: Any) {
+        answerPoint1.image = UIImage(named: "active")
+        answer2But.isEnabled = false
+        
+        switch currentQuestionInt {
+        case 0:
+            let wingif = "q0-a1"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
+            break
+            
+        case 1:
+            let losegif = "q1-a0"
+            gifView.loadGif(name: losegif)
+            break
+            
+        case 2:
+            let wingif = "q2-a1"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
+            break
+            
+        case 3:
+            let wingif = "q3-a0"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
+            break
+            
+        case 4:
+            let losegif = "q4-a0"
+            gifView.loadGif(name: losegif)
+            break
+        case 5:
+            let wingif = "q6-a1"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
+            break
+        default:
+            break
+        }
     }
     
     @IBAction func answer2Click(_ sender: Any) {
+        answerPoint2.image = UIImage(named: "active")
+        answer1But.isEnabled = false
+        
+        switch currentQuestionInt {
+            
+        case 0:
+            let losegif = "q0-a0"
+            gifView.loadGif(name: losegif)
+            break
+            
+        case 1:
+            let wingif = "q1-a1"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
+            break
+            
+        case 2:
+            let losegif = "q2-a0"
+            gifView.loadGif(name: losegif)
+            break
+            
+        case 3:
+            let losegif = "q3-a0"
+            gifView.loadGif(name: losegif)
+            break
+        case 4:
+            let wingif = "q4-a1"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
+            break
+        case 5:
+            let losegif = "q6-a0"
+            gifView.loadGif(name: losegif)
+            break
+        default:
+            break
+        }
+    }
+    
+    func refreshButtons() {
+        answerPoint1.image = UIImage(named: "inactive")
+        answerPoint2.image = UIImage(named: "inactive")
+        answer1But.isEnabled = true
+        answer2But.isEnabled = true
+    }
+    
+    @IBAction func nextQuestion(_ sender: Any) {
+        currentQuestionInt = currentQuestionInt + 1
+        switch currentQuestionInt {
+            
+        case 1:
+            refreshButtons()
+            let gifname = "q1"
+            gifView.loadGif(name: gifname)
+            questionLab.text = Q2["question"]
+            answer1But.setTitle(Q2["answer1"], for: .normal)
+            answer2But.setTitle(Q2["answer2"], for: .normal)
+            break
+            
+        case 2:
+            refreshButtons()
+            let gifname = "q2"
+            gifView.loadGif(name: gifname)
+            questionLab.text = Q3["question"]
+            answer1But.setTitle(Q3["answer1"], for: .normal)
+            answer2But.setTitle(Q3["answer2"], for: .normal)
+            break
+            
+        case 3:
+            refreshButtons()
+            let gifname = "q3"
+            gifView.loadGif(name: gifname)
+            questionLab.text = Q4["question"]
+            answer1But.setTitle(Q4["answer1"], for: .normal)
+            answer2But.setTitle(Q4["answer2"], for: .normal)
+            break
+        case 4:
+            refreshButtons()
+            let gifname = "q4"
+            gifView.loadGif(name: gifname)
+            questionLab.text = Q5["question"]
+            answer1But.setTitle(Q5["answer1"], for: .normal)
+            answer2But.setTitle(Q5["answer2"], for: .normal)
+            break
+        case 5:
+            refreshButtons()
+            let gifname = "q6"
+            gifView.loadGif(name: gifname)
+            questionLab.text = Q6["question"]
+            answer1But.setTitle(Q6["answer1"], for: .normal)
+            answer2But.setTitle(Q6["answer2"], for: .normal)
+            nextQuestion.setTitle("Закончить тест", for: .normal)
+            break
+        case 6:
+            finishTest1.isHidden = false
+            gifView.isHidden = true
+            questionLab.isHidden = true
+            answerPoint1.isHidden = true
+            answerPoint2.isHidden = true
+            answer1But.isHidden = true
+            answer2But.isHidden = true
+            nextQuestion.isHidden = true
+            finishTest1.text = "Результаты вашего теста:\n У вас " + String(rightQs) + " баллов"
+            break
+        default:
+            break
+        }
     }
     
     override func viewDidLoad() {
