@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var toTest: UIButton!
     @IBOutlet weak var topic: UITextView!
     @IBOutlet weak var gifView: UIImageView!
+    @IBOutlet weak var topic2: UIButton!
     
     func buttonsHide(){
         header.isHidden = true
@@ -42,7 +43,6 @@ class ViewController: UIViewController {
         topic.isEditable = false
         topic.isScrollEnabled = true
         backButton.isHidden = false
-        toTest.isHidden = false
     }
     
     var topicNum: Int = 0
@@ -50,6 +50,7 @@ class ViewController: UIViewController {
     @IBAction func handle1Click(_ sender: Any) {
         buttonsHide()
         topicAppear()
+        toTest.isHidden = false
         topicNum = 1;
         print(topicNum)
         topicHeader.text = "Начало движения"
@@ -60,6 +61,7 @@ class ViewController: UIViewController {
         buttonsHide()
         topicAppear()
         topicNum = 2;
+        topic2.isHidden = false
         topicHeader.text = "Обгон"
         topic.text = "Продолжим. Мы бы советовали прислушаться к следующим правилам обгона: \n - убедись в том, что ни один водитель за тобой не начал обгона \n - убедись в том, водитель впереди не подал сигнал поворота, встречная полоса свободна и что после обгона он сможет вернуться на свою полосу не создав препятствий обгоняемому транспортному средству \n - во время обгона можно остаться на встречной полосе, если по возвращении на свою полосу придется снова начать обгон \n - не препятствуй обгону путем повышения скорости движения или как-либо иначе! у тебя в детстве было мало грустно закончившихся гонок? :) \n - если дорожная обстановка не позволяет осуществить обгон - не геройствуй, просто двигайся как можно правее и при необходимости пропусти других участников движения!\n Не обгоняй на: \n - на перекрестке; \n - на ж/д переездах (+100 м перед ними); \n -ближе чем за 50 м перед пешеходным переходом в населенном пункте и 100 м — вне населенного пункта; \n - в конце подъема, в тоннелях, на мостах, эстакадах, путепроводах, крутых поворотах и других участках дорог с ограниченным обзором или в условиях недостаточной видимости"
     }
@@ -336,8 +338,8 @@ class ViewController: UIViewController {
     
     @IBAction func nextQuestion(_ sender: Any) {
         currentQuestionInt = currentQuestionInt + 1
+        
         switch currentQuestionInt {
-            
         case 1:
             refreshButtons()
             let gifname = "q1"
@@ -390,8 +392,217 @@ class ViewController: UIViewController {
             answer1But.isHidden = true
             answer2But.isHidden = true
             nextQuestion.isHidden = true
-            finishTest1.text = "Результаты вашего теста:\n У вас " + String(rightQs) + " правильных ответов"
+            finishTest1.text = "Результаты вашего теста:\n" + String(rightQs) + "+"
             break
+        default:
+            break
+        }
+    }
+    
+    //TEST 2
+    
+    @IBOutlet weak var questionTest2: UILabel!
+    @IBOutlet weak var gifTest2: UIImageView!
+    @IBOutlet weak var point1Test2: UIImageView!
+    @IBOutlet weak var point2Test2: UIImageView!
+    @IBOutlet weak var answer1Test2: UIButton!
+    @IBOutlet weak var answer2Test2: UIButton!
+    @IBOutlet weak var nextQTest2: UIButton!
+    @IBOutlet weak var resultTest2: UILabel!
+    @IBOutlet weak var startTest2: UIButton!
+    @IBOutlet weak var viewTest2: UIView!
+    
+    var currentQuestion2 = 7
+    var rightQs2 = 0
+    
+    func showTest2() {
+        startTest2.isHidden = true
+        questionTest2.isHidden = false
+        gifTest2.isHidden = false
+        viewTest2.isHidden = false
+        point1Test2.isHidden = false
+        point2Test2.isHidden = false
+        answer1Test2.isHidden = false
+        answer2Test2.isHidden = false
+        nextQTest2.isHidden = false
+    }
+    
+    @IBAction func startTest2(_ sender: Any) {
+        showTest2()
+        let gifname = "q7"
+        gifTest2.loadGif(name: gifname)
+        questionTest2.text = Q7["question"]
+        answer1Test2.setTitle(Q7["answer1"], for: .normal)
+        answer2Test2.setTitle(Q7["answer2"], for: .normal)
+    }
+    
+    let Q7 = [
+        "question" : "Разрешен ли обгон водителю красного автомобиля в этой ситуации?",
+        "answer1" : "Разрешен",
+        "answer2" : "Запрещен",
+        "index" : "1"
+    ]
+    
+    let Q8 = [
+        "question" : "Разрешено ли водителю белого автомобиля выполнить обгон в этой ситуации?",
+        "answer1" : "Разрешено",
+        "answer2" : "Запрещено",
+        "index" : "1"
+    ]
+    
+    let Q9 = [
+        "question" : "Разрешен ли обгон в этой ситуации?",
+        "answer1" : "Разрешен, если скорость обгоняемого автомобиля составляет менее 30 км/ч",
+        "answer2" : "Запрещен",
+        "index" : "1"
+    ]
+    
+    let Q10 = [
+        "question" : "Разрешено ли водителю белого автомобиля выполнить обгон трактора в данной ситуации?",
+        "answer1" : "Разрешено, при этом он должен убедиться в безопасности маневра",
+        "answer2" : "Запрещено",
+        "index" : "1"
+    ]
+    
+    let Q11 = [
+        "question" : "Как должен поступить водитель синего автомобиля, который движется прямо, в данной ситуации?",
+        "answer1" : "Остановиться перед перекрестком и дождаться, пока фиолетовый автомобиль повернет налево.",
+        "answer2" : "Объехать фиолетовый автомобиль справа, обеспечив безопасность движения",
+        "index" : "1"
+    ]
+    
+    @IBAction func answer1Test2(_ sender: Any) {
+        point1Test2.image = UIImage(named: "active")
+        answer2Test2.isEnabled = false
+        
+        switch currentQuestion2 {
+        case 7:
+            let losegif = "q7-a1"
+            gifTest2.loadGif(name: losegif)
+            break
+            
+        case 8:
+            let losegif = "q8-a1"
+            gifTest2.loadGif(name: losegif)
+            break
+            
+        case 9:
+            let losegif = "q9-a1"
+            gifTest2.loadGif(name: losegif)
+            break
+            
+        case 10:
+             let losegif = "q10-a1"
+             gifTest2.loadGif(name: losegif)
+            break
+            
+        case 11:
+            let losegif = "q11-a0"
+            gifTest2.loadGif(name: losegif)
+            break
+       
+        default:
+            break
+        }
+    }
+    
+    @IBAction func answer2Test2(_ sender: Any) {
+        point2Test2.image = UIImage(named: "active")
+        answer1Test2.isEnabled = false
+        
+        switch currentQuestion2 {
+         case 7:
+             let wingif = "q7-a0"
+             gifTest2.loadGif(name: wingif)
+             rightQs2 = rightQs2 + 1
+             break
+             
+         case 8:
+            let wingif = "q8-a0"
+             gifTest2.loadGif(name: wingif)
+             rightQs2 = rightQs2 + 1
+             break
+             
+         case 9:
+             let wingif = "q9-a0"
+             gifTest2.loadGif(name: wingif)
+             rightQs2 = rightQs2 + 1
+             break
+             
+         case 10:
+              let wingif = "q10-a0"
+              gifTest2.loadGif(name: wingif)
+              rightQs2 = rightQs2 + 1
+             break
+             
+         case 11:
+             let wingif = "q11-a1"
+             gifTest2.loadGif(name: wingif)
+             rightQs2 = rightQs2 + 1
+             break
+        
+         default:
+             break
+         }
+    }
+    
+    func refreshButtons2() {
+        point1Test2.image = UIImage(named: "inactive")
+        point2Test2.image = UIImage(named: "inactive")
+        answer1Test2.isEnabled = true
+        answer2Test2.isEnabled = true
+    }
+    
+    
+    @IBAction func nextQTest2(_ sender: Any) {
+        currentQuestion2 = currentQuestion2 + 1
+        
+        switch currentQuestion2 {
+        case 8:
+            refreshButtons2()
+            let gifname = "q8"
+            gifTest2.loadGif(name: gifname)
+            questionTest2.text = Q8["question"]
+            answer1Test2.setTitle(Q8["answer1"], for: .normal)
+            answer2Test2.setTitle(Q8["answer2"], for: .normal)
+            break
+            
+        case 9:
+            refreshButtons2()
+            let gifname = "q9"
+            gifTest2.loadGif(name: gifname)
+            questionTest2.text = Q9["question"]
+            answer1Test2.setTitle(Q9["answer1"], for: .normal)
+            answer2Test2.setTitle(Q9["answer2"], for: .normal)
+            break
+        case 10:
+            refreshButtons2()
+            let gifname = "q10"
+            gifTest2.loadGif(name: gifname)
+            questionTest2.text = Q10["question"]
+            answer1Test2.setTitle(Q10["answer1"], for: .normal)
+            answer2Test2.setTitle(Q10["answer2"], for: .normal)
+            break
+        case 11:
+            refreshButtons2()
+            let gifname = "q11"
+            gifTest2.loadGif(name: gifname)
+            questionTest2.text = Q11["question"]
+            answer1Test2.setTitle(Q11["answer1"], for: .normal)
+            answer2Test2.setTitle(Q11["answer2"], for: .normal)
+            nextQTest2.setTitle("Закончить тест", for: .normal)
+            break
+        case 12:
+            questionTest2.isHidden = true
+            gifTest2.isHidden = true
+            point1Test2.isHidden = true
+            point2Test2.isHidden = true
+            answer1Test2.isHidden = true
+            answer2Test2.isHidden = true
+            nextQTest2.isHidden = true
+            viewTest2.isHidden = true
+            resultTest2.isHidden = false
+            resultTest2.text = "Результаты вашего теста:\n" + String(rightQs2) + "+"
         default:
             break
         }
