@@ -191,42 +191,42 @@ class ViewController: UIViewController {
     let Q1 = [
         "question" : "Въезжая на дорогу по полосе разгона, водитель должен:",
         "answer1" : "Вливаться в транспортный поток,\nуступая дорогу",
-        "answer2" : "Вливаться в транспортный поток,\nдругие водители, увидев его, должны обязательно уступить ему дорогу",
+        "answer2" : "Вливаться в транспортный поток,\nдругие водители, увидев его,\nдолжны обязательно уступить\nему дорогу",
         "index" : "0"
     ]
     
     let Q2 = [
         "question" : "Разрешено ли в данном месте опасного поворота движение задним ходом?",
-        "answer1" : "Разрешено при условии обеспечения безопасности дорожного движения",
+        "answer1" : "Разрешено при условии\nобеспечения безопасности\nдорожного движения",
         "answer2" : "Запрещено",
         "index" : "1"
     ]
     
     let Q3 = [
         "question" : "Как разъедутся транспортные средства на лесной дороге?",
-        "answer1" : "Белый автомобиль проедет первым, синий - вторым",
-        "answer2" : "Синий автомобиль проедет первым, белый - вторым",
+        "answer1" : "Белый автомобиль проедет\nпервым, синий - вторым",
+        "answer2" : "Синий автомобиль проедет\nпервым, белый - вторым",
         "index" : "0"
     ]
     
     let Q4 = [
         "question" : "Как разъедутся транспортные средства в жилой зоне?",
-        "answer1" : "Желтый автомобиль проедет первым, серый - вторым",
-        "answer2" : "Серый автомобиль проедет первым, желтый - вторым",
-        "index" : "1"
+        "answer1" : "Серый автомобиль проедет\nпервым, желтый - вторым",
+        "answer2" : "Желтый автомобиль проедет\nпервым, серый - вторым",
+        "index" : "0"
     ]
     
     let Q5 = [
         "question" : "Вы, водитель автомобиля, выезжая с территории жилой зоны, должны уступить дорогу:",
         "answer1" : "Автомобилю и пешеходу",
-        "answer2" : "Только автомобилю",
+        "answer2" : "Только пешеходу",
         "index" : "0"
     ]
     
     let Q6 = [
         "question" : "Вы водитель серого автомобиля, решили перестроиться вправо. Ваши действия?",
         "answer1" : "Уступите дорогу водителю белого автомобиля и выполните маневр",
-        "answer2" : "Начнете перестроение, потому что имеете преимущество перед водителем белого автомобиля",
+        "answer2" : "Начнете перестроение, потому\nчто имеете преимущество перед\nводителем белого автомобиля",
         "index" : "0"
     ]
     
@@ -266,14 +266,15 @@ class ViewController: UIViewController {
             break
             
         case 3:
-            let wingif = "q3-a0"
-            gifView.loadGif(name: wingif)
-            rightQs = rightQs + 1
+             let wingif = "q3-a0"
+             gifView.loadGif(name: wingif)
+             rightQs = rightQs + 1
             break
             
         case 4:
-            let losegif = "q4-a0"
-            gifView.loadGif(name: losegif)
+            let wingif = "q4-a1"
+            gifView.loadGif(name: wingif)
+            rightQs = rightQs + 1
             break
         case 5:
             let wingif = "q6-a1"
@@ -308,14 +309,15 @@ class ViewController: UIViewController {
             break
             
         case 3:
-            let losegif = "q3-a0"
+            let losegif = "q3-a1"
             gifView.loadGif(name: losegif)
             break
+            
         case 4:
-            let wingif = "q4-a1"
-            gifView.loadGif(name: wingif)
-            rightQs = rightQs + 1
+            let losegif = "q4-a0"
+            gifView.loadGif(name: losegif)
             break
+            
         case 5:
             let losegif = "q6-a0"
             gifView.loadGif(name: losegif)
@@ -388,7 +390,7 @@ class ViewController: UIViewController {
             answer1But.isHidden = true
             answer2But.isHidden = true
             nextQuestion.isHidden = true
-            finishTest1.text = "Результаты вашего теста:\n У вас " + String(rightQs) + " баллов"
+            finishTest1.text = "Результаты вашего теста:\n У вас " + String(rightQs) + " правильных ответов"
             break
         default:
             break
