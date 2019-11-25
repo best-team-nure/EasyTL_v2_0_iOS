@@ -325,7 +325,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mTj-op-cHj">
-                                                <rect key="frame" x="90" y="503" width="294" height="33"/>
+                                                <rect key="frame" x="90" y="510" width="294" height="33"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Ответ2">
@@ -337,7 +337,7 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwT-10-uxZ">
-                                                <rect key="frame" x="126" y="581" width="162" height="33"/>
+                                                <rect key="frame" x="126" y="588" width="162" height="33"/>
                                                 <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
                                                 <state key="normal" title="Следующий вопрос">
@@ -383,7 +383,7 @@
                                             <constraint firstItem="Kws-ps-qyM" firstAttribute="top" secondItem="398-nv-4YS" secondAttribute="bottom" constant="40" id="k60-kh-02P"/>
                                             <constraint firstAttribute="trailing" secondItem="u7Q-Uc-01B" secondAttribute="trailing" constant="90" id="nBo-8Q-zIM"/>
                                             <constraint firstItem="2eK-0N-0x9" firstAttribute="top" secondItem="9OO-u2-TYt" secondAttribute="top" constant="100" id="rzh-QZ-Ynd"/>
-                                            <constraint firstItem="mTj-op-cHj" firstAttribute="top" secondItem="1Z9-1s-Z4W" secondAttribute="bottom" constant="30" id="wbm-Ig-lq3"/>
+                                            <constraint firstItem="mTj-op-cHj" firstAttribute="top" secondItem="398-nv-4YS" secondAttribute="bottom" constant="100" id="wbm-Ig-lq3"/>
                                             <constraint firstItem="398-nv-4YS" firstAttribute="leading" secondItem="9OO-u2-TYt" secondAttribute="leading" constant="57" id="zav-k6-Gxv"/>
                                         </constraints>
                                     </view>
