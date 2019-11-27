@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1EF0F4238E596200C1DDEF /* SwiftyGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1EF0F3238E596200C1DDEF /* SwiftyGif.swift */; };
 		CE28661A2376D77700780369 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2866192376D77700780369 /* TopicViewController.swift */; };
 		CE316CC623886D2A007AC192 /* Swift+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE316CC523886D2A007AC192 /* Swift+Gif.swift */; };
 		CE316CCA23887081007AC192 /* q0.gif in Resources */ = {isa = PBXBuildFile; fileRef = CE316CC923887081007AC192 /* q0.gif */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1EF0F3238E596200C1DDEF /* SwiftyGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyGif.swift; sourceTree = "<group>"; };
 		CE2866192376D77700780369 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		CE316CC523886D2A007AC192 /* Swift+Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Gif.swift"; sourceTree = "<group>"; };
 		CE316CC923887081007AC192 /* q0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = q0.gif; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				CE328553233CB2B600A7644B /* LaunchScreen.storyboard */,
 				CE32854E233CB2B400A7644B /* Main.storyboard */,
 				CE316CC523886D2A007AC192 /* Swift+Gif.swift */,
+				CE1EF0F3238E596200C1DDEF /* SwiftyGif.swift */,
 				CE2866192376D77700780369 /* TopicViewController.swift */,
 				CE328551233CB2B600A7644B /* Assets.xcassets */,
 				CE7C0C74238AEDAD00B34F33 /* q0-a0.gif */,
@@ -280,6 +283,7 @@
 				CE328549233CB2B400A7644B /* AppDelegate.swift in Sources */,
 				CE28661A2376D77700780369 /* TopicViewController.swift in Sources */,
 				CE32854B233CB2B400A7644B /* SceneDelegate.swift in Sources */,
+				CE1EF0F4238E596200C1DDEF /* SwiftyGif.swift in Sources */,
 				CE316CC623886D2A007AC192 /* Swift+Gif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

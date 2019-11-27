@@ -13,12 +13,8 @@ import ImageIO
 extension UIImageView {
 
     public func loadGif(name: String) {
-        DispatchQueue.global().async {
-            let image = UIImage.gif(name: name)
-            DispatchQueue.main.async {
-                self.image = image
-            }
-        }
+        let image = UIImage.gif(name: name)
+        self.image = image
     }
 
     @available(iOS 9.0, *)
@@ -90,7 +86,7 @@ extension UIImage {
     }
 
     internal class func delayForImageAtIndex(_ index: Int, source: CGImageSource!) -> Double {
-        var delay = 0.1
+        var delay = 0.3
 
         // Get dictionaries
         let cfProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil)
@@ -118,7 +114,7 @@ extension UIImage {
         if let delayObject = delayObject as? Double, delayObject > 0 {
             delay = delayObject
         } else {
-            delay = 0.1 // Make sure they're not too fast
+            delay = 1.5 // Make sure they're not too fast
         }
 
         return delay
@@ -175,6 +171,7 @@ extension UIImage {
 
     internal class func animatedImageWithSource(_ source: CGImageSource) -> UIImage? {
         let count = CGImageSourceGetCount(source)
+        var final = [CGImage]()
         var images = [CGImage]()
         var delays = [Int]()
 
@@ -183,14 +180,22 @@ extension UIImage {
             // Add image
             if let image = CGImageSourceCreateImageAtIndex(source, index, nil) {
                 images.append(image)
+                final.append(image)
+                final[0] = image
+//                if index == count-1{
+//                    for i in 0..<10 {
+//                        images.append(final[0])
+//                        delays.append(Int(finaldelay * 1000.0))
+//                    }
+//                }
             }
-
+            
+            
             // At it's delay in cs
             let delaySeconds = UIImage.delayForImageAtIndex(Int(index),
                 source: source)
             delays.append(Int(delaySeconds * 1000.0)) // Seconds to ms
         }
-
         // Calculate full duration
         let duration: Int = {
             var sum = 0

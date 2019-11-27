@@ -182,6 +182,7 @@ class ViewController: UIViewController {
     func startButton(){
         startTest.isHidden = true
         gifView.isHidden = false
+        //view1.setAnimationRepeatCount = 1;
         answer1But.isHidden = false
         answer2But.isHidden = false
         answerPoint1.isHidden = false
@@ -237,8 +238,13 @@ class ViewController: UIViewController {
     
     @IBAction func startTest(_ sender: Any) {
         startButton()
-        let gifname = "q0"
-        gifView.loadGif(name: gifname)
+        let gifname = UIImage.gifImageWithName("q0")
+        gifView.animationImages = gifname?.images
+        gifView.animationDuration = gifname!.duration
+        gifView.animationRepeatCount = 3
+        gifView.startAnimating()
+        gifView.image = gifname?.images?[6]
+        //gifView.loadGif(name: gifname)
         questionLab.text = Q1["question"]
         answer1But.setTitle(Q1["answer1"], for: .normal)
         answer2But.setTitle(Q1["answer2"], for: .normal)
@@ -610,6 +616,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //gifView.animationRepeatCount = 1;
     }
 }
 

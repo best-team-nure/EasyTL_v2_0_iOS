@@ -294,7 +294,7 @@
                                                 </connections>
                                             </button>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsq-Ht-Yle">
-                                                <rect key="frame" x="30" y="35" width="354" height="24"/>
+                                                <rect key="frame" x="30" y="30" width="354" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -358,7 +358,7 @@
                                         <constraints>
                                             <constraint firstItem="398-nv-4YS" firstAttribute="centerX" secondItem="Z3t-qw-OP7" secondAttribute="centerX" constant="-0.25" id="2bd-3Z-biP"/>
                                             <constraint firstItem="mTj-op-cHj" firstAttribute="leading" secondItem="pKF-tS-hW8" secondAttribute="trailing" constant="40" id="5va-bN-AOP"/>
-                                            <constraint firstItem="gsq-Ht-Yle" firstAttribute="top" secondItem="9OO-u2-TYt" secondAttribute="top" constant="35" id="60m-hN-k2t"/>
+                                            <constraint firstItem="gsq-Ht-Yle" firstAttribute="top" secondItem="9OO-u2-TYt" secondAttribute="top" constant="30" id="60m-hN-k2t"/>
                                             <constraint firstAttribute="trailing" secondItem="gsq-Ht-Yle" secondAttribute="trailing" constant="30" id="8KV-i9-ic4"/>
                                             <constraint firstAttribute="trailing" secondItem="398-nv-4YS" secondAttribute="trailing" constant="57" id="9WD-tS-u0P"/>
                                             <constraint firstItem="pKF-tS-hW8" firstAttribute="leading" secondItem="9OO-u2-TYt" secondAttribute="leading" constant="30" id="AOa-Fu-MqM"/>
@@ -922,7 +922,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8e-Xs-jkp">
-                                <rect key="frame" x="30" y="35" width="354" height="24"/>
+                                <rect key="frame" x="30" y="25" width="354" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1020,7 +1020,7 @@
                             <constraint firstItem="zgB-b7-s7I" firstAttribute="trailing" secondItem="aMJ-hU-FHX" secondAttribute="trailing" constant="125" id="Dih-0c-AMp"/>
                             <constraint firstAttribute="trailing" secondItem="ybD-D6-ila" secondAttribute="trailing" id="Go0-LX-YUD"/>
                             <constraint firstItem="cj7-rd-1Sz" firstAttribute="top" secondItem="zgB-b7-s7I" secondAttribute="top" constant="100" id="HcN-UL-XNc"/>
-                            <constraint firstItem="Z8e-Xs-jkp" firstAttribute="top" secondItem="zgB-b7-s7I" secondAttribute="top" constant="35" id="KGu-xs-ibg"/>
+                            <constraint firstItem="Z8e-Xs-jkp" firstAttribute="top" secondItem="zgB-b7-s7I" secondAttribute="top" constant="25" id="KGu-xs-ibg"/>
                             <constraint firstItem="zgB-b7-s7I" firstAttribute="bottom" secondItem="dWX-A3-hGF" secondAttribute="bottom" constant="30" id="KSa-kq-43J"/>
                             <constraint firstItem="MtI-Q1-UPT" firstAttribute="leading" secondItem="zgB-b7-s7I" secondAttribute="leading" constant="57" id="PYf-YF-BAu"/>
                             <constraint firstItem="aMJ-hU-FHX" firstAttribute="top" secondItem="xxb-nz-1xF" secondAttribute="bottom" constant="10" id="S9S-rh-v1b"/>
