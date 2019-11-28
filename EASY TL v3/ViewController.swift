@@ -236,15 +236,18 @@ class ViewController: UIViewController {
     var currentQuestionInt = 0
     var rightQs = 0
     
+    func gifConstruct1 (gif: String,  repeatcount: Int) {
+        let gifname = UIImage.gifImageWithName(gif)
+        gifView.animationImages = gifname?.images
+        let size = gifname?.images?.count
+        gifView.animationDuration = gifname!.duration
+        gifView.animationRepeatCount = repeatcount
+        gifView.startAnimating()
+        gifView.image = gifname?.images?[size! - 1]
+    }
     @IBAction func startTest(_ sender: Any) {
         startButton()
-        let gifname = UIImage.gifImageWithName("q0")
-        gifView.animationImages = gifname?.images
-        gifView.animationDuration = gifname!.duration
-        gifView.animationRepeatCount = 3
-        gifView.startAnimating()
-        gifView.image = gifname?.images?[6]
-        //gifView.loadGif(name: gifname)
+        gifConstruct1(gif: "q0",repeatcount: 3)
         questionLab.text = Q1["question"]
         answer1But.setTitle(Q1["answer1"], for: .normal)
         answer2But.setTitle(Q1["answer2"], for: .normal)
@@ -257,36 +260,30 @@ class ViewController: UIViewController {
         
         switch currentQuestionInt {
         case 0:
-            let wingif = "q0-a1"
-            gifView.loadGif(name: wingif)
+            gifConstruct1(gif: "q0-a1",repeatcount: 1)
             rightQs = rightQs + 1
             break
             
         case 1:
-            let losegif = "q1-a0"
-            gifView.loadGif(name: losegif)
+            gifConstruct1(gif: "q1-a0",repeatcount: 1)
             break
             
         case 2:
-            let wingif = "q2-a1"
-            gifView.loadGif(name: wingif)
+            gifConstruct1(gif: "q2-a1",repeatcount: 1)
             rightQs = rightQs + 1
             break
             
         case 3:
-             let wingif = "q3-a0"
-             gifView.loadGif(name: wingif)
+            gifConstruct1(gif: "q3-a0",repeatcount: 1)
              rightQs = rightQs + 1
             break
             
         case 4:
-            let wingif = "q4-a1"
-            gifView.loadGif(name: wingif)
+            gifConstruct1(gif: "q4-a1",repeatcount: 1)
             rightQs = rightQs + 1
             break
         case 5:
-            let wingif = "q6-a1"
-            gifView.loadGif(name: wingif)
+            gifConstruct1(gif: "q6-a1",repeatcount: 1)
             rightQs = rightQs + 1
             break
         default:
@@ -301,34 +298,28 @@ class ViewController: UIViewController {
         switch currentQuestionInt {
             
         case 0:
-            let losegif = "q0-a0"
-            gifView.loadGif(name: losegif)
+            gifConstruct1(gif: "q0-a0",repeatcount: 1)
             break
             
         case 1:
-            let wingif = "q1-a1"
-            gifView.loadGif(name: wingif)
+            gifConstruct1(gif: "q1-a1",repeatcount: 1)
             rightQs = rightQs + 1
             break
             
         case 2:
-            let losegif = "q2-a0"
-            gifView.loadGif(name: losegif)
+            gifConstruct1(gif: "q2-a0",repeatcount: 1)
             break
             
         case 3:
-            let losegif = "q3-a1"
-            gifView.loadGif(name: losegif)
+            gifConstruct1(gif: "q3-a1",repeatcount: 1)
             break
             
         case 4:
-            let losegif = "q4-a0"
-            gifView.loadGif(name: losegif)
+            gifConstruct1(gif: "q4-a0",repeatcount: 1)
             break
             
         case 5:
-            let losegif = "q6-a0"
-            gifView.loadGif(name: losegif)
+            gifConstruct1(gif: "q6-a0",repeatcount: 1)
             break
         default:
             break
@@ -348,8 +339,7 @@ class ViewController: UIViewController {
         switch currentQuestionInt {
         case 1:
             refreshButtons()
-            let gifname = "q1"
-            gifView.loadGif(name: gifname)
+            gifConstruct1(gif: "q1",repeatcount: 2)
             questionLab.text = Q2["question"]
             answer1But.setTitle(Q2["answer1"], for: .normal)
             answer2But.setTitle(Q2["answer2"], for: .normal)
@@ -357,8 +347,7 @@ class ViewController: UIViewController {
             
         case 2:
             refreshButtons()
-            let gifname = "q2"
-            gifView.loadGif(name: gifname)
+            gifConstruct1(gif: "q2",repeatcount: 2)
             questionLab.text = Q3["question"]
             answer1But.setTitle(Q3["answer1"], for: .normal)
             answer2But.setTitle(Q3["answer2"], for: .normal)
@@ -366,24 +355,21 @@ class ViewController: UIViewController {
             
         case 3:
             refreshButtons()
-            let gifname = "q3"
-            gifView.loadGif(name: gifname)
+            gifConstruct1(gif: "q3",repeatcount: 2)
             questionLab.text = Q4["question"]
             answer1But.setTitle(Q4["answer1"], for: .normal)
             answer2But.setTitle(Q4["answer2"], for: .normal)
             break
         case 4:
             refreshButtons()
-            let gifname = "q4"
-            gifView.loadGif(name: gifname)
+            gifConstruct1(gif: "q4",repeatcount: 2)
             questionLab.text = Q5["question"]
             answer1But.setTitle(Q5["answer1"], for: .normal)
             answer2But.setTitle(Q5["answer2"], for: .normal)
             break
         case 5:
             refreshButtons()
-            let gifname = "q6"
-            gifView.loadGif(name: gifname)
+            gifConstruct1(gif: "q6",repeatcount: 2)
             questionLab.text = Q6["question"]
             answer1But.setTitle(Q6["answer1"], for: .normal)
             answer2But.setTitle(Q6["answer2"], for: .normal)
@@ -433,10 +419,19 @@ class ViewController: UIViewController {
         nextQTest2.isHidden = false
     }
     
+    func gifConstruct2 (gif: String,  repeatcount: Int) {
+        let gifname = UIImage.gifImageWithName(gif)
+        gifTest2.animationImages = gifname?.images
+        let size = gifname?.images?.count
+        gifTest2.animationDuration = gifname!.duration
+        gifTest2.animationRepeatCount = repeatcount
+        gifTest2.startAnimating()
+        gifTest2.image = gifname?.images?[size! - 1]
+    }
+    
     @IBAction func startTest2(_ sender: Any) {
         showTest2()
-        let gifname = "q7"
-        gifTest2.loadGif(name: gifname)
+        gifConstruct2(gif: "q7",repeatcount: 2)
         questionTest2.text = Q7["question"]
         answer1Test2.setTitle(Q7["answer1"], for: .normal)
         answer2Test2.setTitle(Q7["answer2"], for: .normal)
@@ -483,28 +478,23 @@ class ViewController: UIViewController {
         
         switch currentQuestion2 {
         case 7:
-            let losegif = "q7-a1"
-            gifTest2.loadGif(name: losegif)
+            gifConstruct2(gif: "q7-a1",repeatcount: 1)
             break
             
         case 8:
-            let losegif = "q8-a1"
-            gifTest2.loadGif(name: losegif)
+            gifConstruct2(gif: "q8-a1",repeatcount: 1)
             break
             
         case 9:
-            let losegif = "q9-a1"
-            gifTest2.loadGif(name: losegif)
+            gifConstruct2(gif: "q9-a1",repeatcount: 1)
             break
             
         case 10:
-             let losegif = "q10-a1"
-             gifTest2.loadGif(name: losegif)
+            gifConstruct2(gif: "q10-a1",repeatcount: 1)
             break
             
         case 11:
-            let losegif = "q11-a0"
-            gifTest2.loadGif(name: losegif)
+            gifConstruct2(gif: "q11-a0",repeatcount: 1)
             break
        
         default:
@@ -518,32 +508,27 @@ class ViewController: UIViewController {
         
         switch currentQuestion2 {
          case 7:
-             let wingif = "q7-a0"
-             gifTest2.loadGif(name: wingif)
+            gifConstruct2(gif: "q7-a0",repeatcount: 1)
              rightQs2 = rightQs2 + 1
              break
              
          case 8:
-            let wingif = "q8-a0"
-             gifTest2.loadGif(name: wingif)
+             gifConstruct2(gif: "q8-a0",repeatcount: 1)
              rightQs2 = rightQs2 + 1
              break
              
          case 9:
-             let wingif = "q9-a0"
-             gifTest2.loadGif(name: wingif)
+            gifConstruct2(gif: "q9-a0",repeatcount: 1)
              rightQs2 = rightQs2 + 1
              break
              
          case 10:
-              let wingif = "q10-a0"
-              gifTest2.loadGif(name: wingif)
+              gifConstruct2(gif: "q10-a0",repeatcount: 1)
               rightQs2 = rightQs2 + 1
              break
              
          case 11:
-             let wingif = "q11-a1"
-             gifTest2.loadGif(name: wingif)
+             gifConstruct2(gif: "q11-a1",repeatcount: 1)
              rightQs2 = rightQs2 + 1
              break
         
@@ -566,8 +551,7 @@ class ViewController: UIViewController {
         switch currentQuestion2 {
         case 8:
             refreshButtons2()
-            let gifname = "q8"
-            gifTest2.loadGif(name: gifname)
+            gifConstruct2(gif: "q8",repeatcount: 2)
             questionTest2.text = Q8["question"]
             answer1Test2.setTitle(Q8["answer1"], for: .normal)
             answer2Test2.setTitle(Q8["answer2"], for: .normal)
@@ -575,24 +559,21 @@ class ViewController: UIViewController {
             
         case 9:
             refreshButtons2()
-            let gifname = "q9"
-            gifTest2.loadGif(name: gifname)
+            gifConstruct2(gif: "q9",repeatcount: 2)
             questionTest2.text = Q9["question"]
             answer1Test2.setTitle(Q9["answer1"], for: .normal)
             answer2Test2.setTitle(Q9["answer2"], for: .normal)
             break
         case 10:
             refreshButtons2()
-            let gifname = "q10"
-            gifTest2.loadGif(name: gifname)
+            gifConstruct2(gif: "q10",repeatcount: 2)
             questionTest2.text = Q10["question"]
             answer1Test2.setTitle(Q10["answer1"], for: .normal)
             answer2Test2.setTitle(Q10["answer2"], for: .normal)
             break
-        case 11:
+        case 11: 
             refreshButtons2()
-            let gifname = "q11"
-            gifTest2.loadGif(name: gifname)
+            gifConstruct2(gif: "q11",repeatcount: 2)
             questionTest2.text = Q11["question"]
             answer1Test2.setTitle(Q11["answer1"], for: .normal)
             answer2Test2.setTitle(Q11["answer2"], for: .normal)
@@ -614,9 +595,459 @@ class ViewController: UIViewController {
         }
     }
     
+    //QUICK TEST
+    let Q12 = [
+        "question" : "Имеет ли право водитель остановиться в этом месте?",
+        "answer1" : "Имеет право только для посадки (высадки) пассажиров",
+        "answer2" : "Не имеет права",
+        "index" : "1"
+    ]
+    
+    let Q13 = [
+        "question" : "На каком из мест водителю легкового автомобиля разрешено остановиться?",
+        "answer1" : "На месте А",
+        "answer2" : "На месте Б",
+        "index" : "0"
+    ]
+    
+    let Q14 = [
+        "question" : "В каком из мест водителю разрешено выполнить остановку?",
+        "answer1" : "На месте А и Б",
+        "answer2" : "На месте А",
+        "index" : "1"
+    ]
+    
+    let Q15 = [
+        "question" : "Разрешено ли водителю остановиться в этом месте?",
+        "answer1" : "Разрешено",
+        "answer2" : "Запрещено",
+        "index" : "1"
+    ]
+    
+    let Q16 = [
+        "question" : "Разрешено ли водителю остановиться на путепроводе в этом месте?",
+        "answer1" : "Разрешено только для посадки (высадки) пассажиров",
+        "answer2" : "Запрещено",
+        "index" : "1"
+    ]
+    
+    let Q17 = [
+        "question" : "Как должен в данной ситуации поступить водитель белого автомобиля (ожидает включения сигнала светофора для движения прямо)?",
+        "answer1" : "Перестроиться в правый ряд",
+        "answer2" : "Включить левый указатель поворота, продолжить движение в направлении, указанном стрелкой",
+        "index" : "1"
+    ]
+   
+    let Q18 = [
+        "question" : "Какая очередность проезда данного перекрестка?",
+        "answer1" : "Зеленый, белый автомобиль",
+        "answer2" : "Белый, зеленый автомобиль",
+        "index" : "1"
+    ]
+    
+    let Q19 = [
+        "question" : "Как должен поступить водитель желтого автомобиля в данной ситуации?",
+        "answer1" : "Должен проехать первым, поскольку имеет преимущество в движении",
+        "answer2" : "Должен уступить дорогу белому автомобилю, потому что он для него помеха справа",
+        "index" : "0"
+    ]
+    
+    let Q20 = [
+        "question" : "Поворачивая направо, водитель синего автомобиля должен:",
+        "answer1" : "Уступить дорогу обоим трамваям",
+        "answer2" : "Проехать перекресток первым",
+        "index" : "0"
+    ]
+    
+    @IBOutlet weak var qQuick: UILabel!
+    @IBOutlet weak var gifQuick: UIImageView!
+    @IBOutlet weak var p1Quick: UIImageView!
+    @IBOutlet weak var p2Quick: UIImageView!
+    @IBOutlet weak var a1Quick: UIButton!
+    @IBOutlet weak var a2Quick: UIButton!
+    @IBOutlet weak var nextQuick: UIButton!
+    @IBOutlet weak var startQuick: UIButton!
+    @IBOutlet weak var viewQuick: UIView!
+    @IBOutlet weak var finishQuick: UILabel!
+    
+    var currentQuick = 0
+    var rightQuick = 0
+    
+    func showQuick(){
+        startQuick.isHidden = true
+        viewQuick.isHidden = false
+        qQuick.isHidden = false
+        gifQuick.isHidden = false
+        p1Quick.isHidden = false
+        p2Quick.isHidden = false
+        a1Quick.isHidden = false
+        a2Quick.isHidden = false
+        nextQuick.isHidden = false
+    }
+    
+    func gifQuickConstr (gif: String,  repeatcount: Int) {
+        let gifname = UIImage.gifImageWithName(gif)
+        gifQuick.animationImages = gifname?.images
+        let size = gifname?.images?.count
+        gifQuick.animationDuration = gifname!.duration
+        gifQuick.animationRepeatCount = repeatcount
+        gifQuick.startAnimating()
+        gifQuick.image = gifname?.images?[size! - 1]
+    }
+    
+    func refreshButQ() {
+        p1Quick.image = UIImage(named: "inactive")
+        p2Quick.image = UIImage(named: "inactive")
+        a1Quick.isEnabled = true
+        a2Quick.isEnabled = true
+    }
+    
+    @IBAction func startQuick(_ sender: Any) {
+        showQuick()
+        gifQuickConstr(gif: "q0",repeatcount: 1)
+        qQuick.text = Q1["question"]
+        a1Quick.setTitle(Q1["answer1"], for: .normal)
+        a2Quick.setTitle(Q1["answer2"], for: .normal)
+    }
+    
+    @IBAction func a1Quick(_ sender: Any) {
+        p1Quick.image = UIImage(named: "active")
+        a2Quick.isEnabled = false
+        
+        switch currentQuick {
+            case 0:
+               gifQuickConstr(gif: "q0-a1",repeatcount: 1)
+               rightQuick += 1
+               break
+           case 1:
+               gifQuickConstr(gif: "q1-a0",repeatcount: 1)
+               break
+           case 2:
+               gifQuickConstr(gif: "q2-a1",repeatcount: 1)
+               rightQuick += 1
+               break
+           case 3:
+               gifQuickConstr(gif: "q3-a0",repeatcount: 1)
+                rightQuick += 1
+               break
+           case 4:
+               gifQuickConstr(gif: "q4-a1",repeatcount: 1)
+               rightQuick += 1
+               break
+           case 5:
+               gifQuickConstr(gif: "q6-a1",repeatcount: 1)
+               rightQuick += 1
+               //currentQuick = 6
+                break
+            case 7:
+                gifQuickConstr(gif: "q7-a1",repeatcount: 1)
+                break
+            case 8:
+                gifQuickConstr(gif: "q8-a1",repeatcount: 1)
+                break
+            case 9:
+                gifQuickConstr(gif: "q9-a1",repeatcount: 1)
+                break
+            case 10:
+                gifQuickConstr(gif: "q10-a1",repeatcount: 1)
+                break
+            case 11:
+                gifQuickConstr(gif: "q11-a0",repeatcount: 1)
+                break
+            case 12:
+                gifQuickConstr(gif: "q12-a0",repeatcount: 1)
+                break
+            case 13:
+                gifQuickConstr(gif: "q13-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 14:
+                gifQuickConstr(gif: "q14-a0",repeatcount: 1)
+                break
+            case 15:
+                gifQuickConstr(gif: "q15-a0",repeatcount: 1)
+                break
+            case 16:
+                gifQuickConstr(gif: "q16-a0",repeatcount: 1)
+                break
+            case 17:
+                gifQuickConstr(gif: "q17-a0",repeatcount: 1)
+                break
+            case 18:
+                gifQuickConstr(gif: "q18-a0",repeatcount: 1)
+                break
+            case 19:
+                gifQuickConstr(gif: "q19-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 20:
+                gifQuickConstr(gif: "q20-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+        default:
+            break
+        }
+        
+    }
+    
+    @IBAction func a2Quick(_ sender: Any) {
+        p2Quick.image = UIImage(named: "active")
+        a1Quick.isEnabled = false
+        
+        switch currentQuick {
+            case 0:
+                gifQuickConstr(gif: "q0-a0",repeatcount: 1)
+                break
+                
+            case 1:
+                gifQuickConstr(gif: "q1-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+                
+            case 2:
+                gifQuickConstr(gif: "q2-a0",repeatcount: 1)
+                break
+                
+            case 3:
+                gifQuickConstr(gif: "q3-a1",repeatcount: 1)
+                break
+                
+            case 4:
+                gifQuickConstr(gif: "q4-a0",repeatcount: 1)
+                break
+                
+            case 5:
+                gifQuickConstr(gif: "q6-a0",repeatcount: 1)
+                //currentQuick = 6
+                break
+            case 7:
+               gifQuickConstr(gif: "q7-a0",repeatcount: 1)
+                rightQuick += 1
+                break
+                
+            case 8:
+                gifQuickConstr(gif: "q8-a0",repeatcount: 1)
+                rightQuick += 1
+                break
+                
+            case 9:
+               gifQuickConstr(gif: "q9-a0",repeatcount: 1)
+                rightQuick += 1
+                break
+                
+            case 10:
+                 gifQuickConstr(gif: "q10-a0",repeatcount: 1)
+                 rightQuick += 1
+                break
+                
+            case 11:
+                gifQuickConstr(gif: "q11-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 12:
+                gifQuickConstr(gif: "q12-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 13:
+                 gifQuickConstr(gif: "q13-a0",repeatcount: 1)
+                break
+            case 14:
+                gifQuickConstr(gif: "q14-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 15:
+                gifQuickConstr(gif: "q15-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 16:
+                gifQuickConstr(gif: "q16-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 17:
+                gifQuickConstr(gif: "q17-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 18:
+                gifQuickConstr(gif: "q18-a1",repeatcount: 1)
+                rightQuick += 1
+                break
+            case 19:
+                gifQuickConstr(gif: "q19-a0",repeatcount: 1)
+                break
+            case 20:
+                gifQuickConstr(gif: "q20-a0",repeatcount: 1)
+            break
+            default:
+                break
+        }
+        
+    }
+    
+    
+    
+    
+    @IBAction func nextQuick(_ sender: Any) {
+        currentQuick += 1
+        
+        switch currentQuick {
+        case 1:
+           refreshButQ()
+            gifQuickConstr(gif: "q1",repeatcount: 1)
+            qQuick.text = Q2["question"]
+            a1Quick.setTitle(Q2["answer1"], for: .normal)
+            a2Quick.setTitle(Q2["answer2"], for: .normal)
+            break
+            
+        case 2:
+            refreshButQ()
+            gifQuickConstr(gif: "q2",repeatcount: 1)
+            qQuick.text = Q3["question"]
+            a1Quick.setTitle(Q3["answer1"], for: .normal)
+            a2Quick.setTitle(Q3["answer2"], for: .normal)
+            break
+            
+        case 3:
+            refreshButQ()
+            gifQuickConstr(gif: "q3",repeatcount: 1)
+            qQuick.text = Q4["question"]
+            a1Quick.setTitle(Q4["answer1"], for: .normal)
+            a2Quick.setTitle(Q4["answer2"], for: .normal)
+            break
+        case 4:
+            refreshButQ()
+            gifQuickConstr(gif: "q4",repeatcount: 1)
+            qQuick.text = Q5["question"]
+            a1Quick.setTitle(Q5["answer1"], for: .normal)
+            a2Quick.setTitle(Q5["answer2"], for: .normal)
+            break
+        case 5:
+            refreshButQ()
+            currentQuick = 6
+            gifQuickConstr(gif: "q6",repeatcount: 1)
+            qQuick.text = Q6["question"]
+            a1Quick.setTitle(Q6["answer1"], for: .normal)
+            a2Quick.setTitle(Q6["answer2"], for: .normal)
+            break
+        case 7:
+            refreshButQ()
+            gifQuickConstr(gif: "q7",repeatcount: 1)
+            qQuick.text = Q7["question"]
+            a1Quick.setTitle(Q7["answer1"], for: .normal)
+            a2Quick.setTitle(Q7["answer2"], for: .normal)
+        case 8:
+            refreshButQ()
+            gifQuickConstr(gif: "q8",repeatcount: 1)
+            qQuick.text = Q8["question"]
+            a1Quick.setTitle(Q8["answer1"], for: .normal)
+            a2Quick.setTitle(Q8["answer2"], for: .normal)
+            break
+            
+        case 9:
+            refreshButQ()
+            gifQuickConstr(gif: "q9",repeatcount: 1)
+            qQuick.text = Q9["question"]
+            a1Quick.setTitle(Q9["answer1"], for: .normal)
+            a2Quick.setTitle(Q9["answer2"], for: .normal)
+            break
+        case 10:
+            refreshButQ()
+            gifQuickConstr(gif: "q10",repeatcount: 1)
+            qQuick.text = Q10["question"]
+            a1Quick.setTitle(Q10["answer1"], for: .normal)
+            a2Quick.setTitle(Q10["answer2"], for: .normal)
+            break
+        case 11:
+            refreshButQ()
+            gifQuickConstr(gif: "q11",repeatcount: 1)
+            qQuick.text = Q11["question"]
+            a1Quick.setTitle(Q11["answer1"], for: .normal)
+            a2Quick.setTitle(Q11["answer2"], for: .normal)
+            break
+        case 12:
+            refreshButQ()
+            gifQuickConstr(gif: "q12",repeatcount: 1)
+            qQuick.text = Q12["question"]
+            a1Quick.setTitle(Q12["answer1"], for: .normal)
+            a2Quick.setTitle(Q12["answer2"], for: .normal)
+            break
+        case 13:
+            refreshButQ()
+            gifQuickConstr(gif: "q13",repeatcount: 1)
+            qQuick.text = Q13["question"]
+            a1Quick.setTitle(Q13["answer1"], for: .normal)
+            a2Quick.setTitle(Q13["answer2"], for: .normal)
+            break
+        case 14:
+            refreshButQ()
+            gifQuickConstr(gif: "q14",repeatcount: 1)
+            qQuick.text = Q14["question"]
+            a1Quick.setTitle(Q14["answer1"], for: .normal)
+            a2Quick.setTitle(Q14["answer2"], for: .normal)
+            break
+        case 15:
+           refreshButQ()
+           gifQuickConstr(gif: "q15",repeatcount: 1)
+           qQuick.text = Q15["question"]
+           a1Quick.setTitle(Q15["answer1"], for: .normal)
+           a2Quick.setTitle(Q15["answer2"], for: .normal)
+           break
+        case 16:
+            refreshButQ()
+            gifQuickConstr(gif: "q16",repeatcount: 1)
+            qQuick.text = Q16["question"]
+            a1Quick.setTitle(Q16["answer1"], for: .normal)
+            a2Quick.setTitle(Q16["answer2"], for: .normal)
+            break
+        case 17:
+            refreshButQ()
+            gifQuickConstr(gif: "q17",repeatcount: 1)
+            qQuick.text = Q17["question"]
+            a1Quick.setTitle(Q17["answer1"], for: .normal)
+            a2Quick.setTitle(Q17["answer2"], for: .normal)
+            break
+        case 18:
+            refreshButQ()
+            gifQuickConstr(gif: "q18",repeatcount: 1)
+            qQuick.text = Q18["question"]
+            a1Quick.setTitle(Q18["answer1"], for: .normal)
+            a2Quick.setTitle(Q18["answer2"], for: .normal)
+            break
+        case 19:
+            refreshButQ()
+            gifQuickConstr(gif: "q19",repeatcount: 1)
+            qQuick.text = Q19["question"]
+            a1Quick.setTitle(Q19["answer1"], for: .normal)
+            a2Quick.setTitle(Q19["answer2"], for: .normal)
+            break
+        case 20:
+            refreshButQ()
+            gifQuickConstr(gif: "q20",repeatcount: 1)
+            qQuick.text = Q20["question"]
+            a1Quick.setTitle(Q20["answer1"], for: .normal)
+            a2Quick.setTitle(Q20["answer2"], for: .normal)
+            nextQuick.setTitle("Закончить тест", for: .normal)
+            break
+        case 21:
+            viewQuick.isHidden = false
+            qQuick.isHidden = true
+            gifQuick.isHidden = true
+            p1Quick.isHidden = true
+            p2Quick.isHidden = true
+            a1Quick.isHidden = true
+            a2Quick.isHidden = true
+            nextQuick.isHidden = true
+            finishQuick.isHidden = false
+            finishQuick.text = "Результаты вашего теста:\n" + String(rightQuick) + "+"
+            break
+        default:
+            break
+        }
+    }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //gifView.animationRepeatCount = 1;
     }
 }
 
