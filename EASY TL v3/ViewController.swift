@@ -669,6 +669,40 @@ class ViewController: UIViewController {
     @IBOutlet weak var startQuick: UIButton!
     @IBOutlet weak var viewQuick: UIView!
     @IBOutlet weak var finishQuick: UILabel!
+    @IBOutlet weak var timer: UILabel!
+    
+    var seconds = 1200
+    var time = Timer()
+    var isTimerRunning = false
+    
+    @objc func updateTimer() {
+        seconds -= 1
+        timer.text = timeString(time: TimeInterval(seconds))
+        
+        if timer.text == "00:00" {
+            viewQuick.isHidden = false
+            qQuick.isHidden = true
+            gifQuick.isHidden = true
+            p1Quick.isHidden = true
+            p2Quick.isHidden = true
+            a1Quick.isHidden = true
+            a2Quick.isHidden = true
+            nextQuick.isHidden = true
+            finishQuick.isHidden = false
+            finishQuick.text = "Ваше время закончилось!\n" + "Результаты вашего теста:\n" + String(rightQuick) + "+"
+            timer.text = ""
+        }
+    }
+    
+    func runTimer() {
+         time = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    func timeString(time:TimeInterval) -> String {
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i", minutes, seconds)
+    }
     
     var currentQuick = 0
     var rightQuick = 0
@@ -704,6 +738,7 @@ class ViewController: UIViewController {
     
     @IBAction func startQuick(_ sender: Any) {
         showQuick()
+        runTimer()
         gifQuickConstr(gif: "q0",repeatcount: 1)
         qQuick.text = Q1["question"]
         a1Quick.setTitle(Q1["answer1"], for: .normal)

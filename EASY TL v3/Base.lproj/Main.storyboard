@@ -524,6 +524,12 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HS-gF-7K8">
+                                        <rect key="frame" x="30" y="637" width="354" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.51997139084507038" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -542,12 +548,15 @@
                                     <constraint firstItem="Xbb-oK-eCv" firstAttribute="leading" secondItem="N60-mw-Jbw" secondAttribute="leading" constant="90" id="SfY-3j-huS"/>
                                     <constraint firstItem="VRh-WO-yxY" firstAttribute="leading" secondItem="N60-mw-Jbw" secondAttribute="leading" constant="30" id="VYS-u0-d6G"/>
                                     <constraint firstAttribute="trailing" secondItem="Xbb-oK-eCv" secondAttribute="trailing" constant="90" id="Vei-FR-2m2"/>
+                                    <constraint firstItem="2HS-gF-7K8" firstAttribute="top" secondItem="FqC-bl-w2U" secondAttribute="bottom" constant="16" id="fie-8s-hvE"/>
                                     <constraint firstAttribute="trailing" secondItem="pUu-P5-fxO" secondAttribute="trailing" constant="30" id="iXd-P1-gcQ"/>
                                     <constraint firstAttribute="trailing" secondItem="E0h-vO-ooh" secondAttribute="trailing" constant="57" id="jXr-HC-tck"/>
                                     <constraint firstItem="CAk-Ps-yxx" firstAttribute="top" secondItem="E0h-vO-ooh" secondAttribute="bottom" constant="115" id="l2B-dg-USC"/>
                                     <constraint firstItem="pUu-P5-fxO" firstAttribute="top" secondItem="E0h-vO-ooh" secondAttribute="bottom" constant="43" id="lWP-3r-zhE"/>
+                                    <constraint firstItem="2HS-gF-7K8" firstAttribute="leading" secondItem="N60-mw-Jbw" secondAttribute="leading" constant="30" id="nhS-zr-wpg"/>
                                     <constraint firstItem="E0h-vO-ooh" firstAttribute="top" secondItem="N60-mw-Jbw" secondAttribute="top" constant="110" id="pkW-XO-moH"/>
                                     <constraint firstItem="FqC-bl-w2U" firstAttribute="top" secondItem="CAk-Ps-yxx" secondAttribute="bottom" constant="30" id="r13-yV-nLK"/>
+                                    <constraint firstAttribute="trailing" secondItem="2HS-gF-7K8" secondAttribute="trailing" constant="30" id="raF-wi-FIo"/>
                                     <constraint firstAttribute="trailing" secondItem="CAk-Ps-yxx" secondAttribute="trailing" constant="30" id="ui6-8G-iRF"/>
                                     <constraint firstItem="CAk-Ps-yxx" firstAttribute="leading" secondItem="Ics-vR-7cP" secondAttribute="trailing" constant="14" id="xYg-md-E1z"/>
                                     <constraint firstAttribute="trailing" secondItem="qou-5d-Cqf" secondAttribute="trailing" constant="30" id="zSK-g0-vds"/>
@@ -579,7 +588,8 @@
                         <outlet property="p2Quick" destination="Ics-vR-7cP" id="bhn-70-LeL"/>
                         <outlet property="qQuick" destination="VRh-WO-yxY" id="HzE-pe-ARo"/>
                         <outlet property="startQuick" destination="Xbb-oK-eCv" id="txl-vr-X7B"/>
-                        <outlet property="viewQuick" destination="N60-mw-Jbw" id="dTk-Va-rkZ"/>
+                        <outlet property="timer" destination="2HS-gF-7K8" id="aPG-nm-dth"/>
+                        <outlet property="viewQuick" destination="N60-mw-Jbw" id="egs-G5-ANp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sk1-46-ycv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -930,19 +940,19 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" image="active" translatesAutoresizingMaskIntoConstraints="NO" id="9S3-r5-mli">
-                                <rect key="frame" x="20" y="103" width="20" height="20"/>
+                                <rect key="frame" x="20" y="103" width="40" height="40"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="g6D-LU-I1B">
-                                <rect key="frame" x="20" y="145" width="20" height="20"/>
+                                <rect key="frame" x="20" y="165" width="40" height="40"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="I42-5J-djF">
-                                <rect key="frame" x="20" y="187" width="20" height="20"/>
+                                <rect key="frame" x="20" y="227" width="40" height="40"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="uPI-Pr-KSW">
-                                <rect key="frame" x="20" y="229" width="20" height="20"/>
+                                <rect key="frame" x="20" y="289" width="40" height="40"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="8Jp-ci-EM1">
-                                <rect key="frame" x="20" y="271" width="20" height="20"/>
+                                <rect key="frame" x="20" y="351" width="40" height="40"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EASY TL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhW-eZ-gtl">
                                 <rect key="frame" x="70" y="720" width="274" height="24"/>
@@ -951,7 +961,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vJV-e4-gez">
-                                <rect key="frame" x="0.0" y="361" width="414" height="354"/>
+                                <rect key="frame" x="0.0" y="461" width="414" height="254"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58640514964788737" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Нажать кнопку старт, прочитать теорию и начать проходить тест по пункту теории. Также вы можете пройти тест из 20 случайных вопросов нажав на кнопку "Быстрый тест"</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -965,7 +975,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byf-k2-Ssv">
-                                <rect key="frame" x="70" y="95" width="314" height="32"/>
+                                <rect key="frame" x="90" y="95" width="294" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Как начать проходить тесты?"/>
                                 <connections>
@@ -973,7 +983,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M3-AB-BHm">
-                                <rect key="frame" x="70" y="137" width="314" height="32"/>
+                                <rect key="frame" x="90" y="137" width="294" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Зачем нужна регистрация?"/>
                                 <connections>
@@ -981,7 +991,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld6-KD-b2v">
-                                <rect key="frame" x="70" y="179" width="314" height="32"/>
+                                <rect key="frame" x="90" y="179" width="294" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Как сохранить свой результат?"/>
                                 <connections>
@@ -989,7 +999,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaW-q2-SRY">
-                                <rect key="frame" x="70" y="221" width="314" height="32"/>
+                                <rect key="frame" x="90" y="221" width="294" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Как поделиться результатом?"/>
                                 <connections>
@@ -997,7 +1007,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMt-Lu-SOb">
-                                <rect key="frame" x="70" y="263" width="314" height="32"/>
+                                <rect key="frame" x="90" y="263" width="294" height="32"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Как мне получить звёзды?"/>
                                 <connections>
@@ -1097,13 +1107,13 @@
                                 <rect key="frame" x="30" y="428" width="364" height="196"/>
                                 <subviews>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="TDM-zd-L3e">
-                                        <rect key="frame" x="10" y="30" width="20" height="20"/>
+                                        <rect key="frame" x="10" y="30" width="40" height="40"/>
                                     </imageView>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="eIa-Sp-IDZ">
-                                        <rect key="frame" x="10" y="95" width="20" height="20"/>
+                                        <rect key="frame" x="10" y="115" width="40" height="40"/>
                                     </imageView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="akR-wQ-ZI5">
-                                        <rect key="frame" x="50" y="25" width="304" height="33"/>
+                                        <rect key="frame" x="70" y="25" width="284" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Ответ1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1113,7 +1123,7 @@
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sAz-cg-y6g">
-                                        <rect key="frame" x="50" y="93" width="314" height="33"/>
+                                        <rect key="frame" x="70" y="93" width="294" height="33"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Ответ2">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
