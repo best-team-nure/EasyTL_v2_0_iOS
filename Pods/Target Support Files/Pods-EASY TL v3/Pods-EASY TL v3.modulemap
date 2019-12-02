@@ -1,0 +1,6 @@
+framework module Pods_EASY_TL_v3 {
+  umbrella header "Pods-EASY TL v3-umbrella.h"
+
+  export *
+  module * { export * }
+}
