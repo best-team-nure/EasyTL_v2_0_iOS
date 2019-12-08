@@ -18,18 +18,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        let authListener = Auth.auth().addStateDidChangeListener{ auth, user in
+        _ = Auth.auth().addStateDidChangeListener{ auth, user in
             
             let storyboard = UIStoryboard(name : "Main", bundle : nil)
             
             //Not sure if we need next 10 lines of code but still....
             if user != nil{
-                let controller = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! UIViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "HomeVC") 
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }
             else{
-                let controller = storyboard.instantiateViewController(withIdentifier: "SignInVC") as! UIViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "SignInVC") 
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             }
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
