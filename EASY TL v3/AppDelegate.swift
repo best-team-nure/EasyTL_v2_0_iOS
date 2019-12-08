@@ -7,36 +7,18 @@
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-    
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
-        
-        let authListener = Auth.auth().addStateDidChangeListener{ auth, user in
-            
-            let storyboard = UIStoryboard(name : "Main", bundle : nil)
-            
-            //Not sure if we need next 10 lines of code but still....
-            if user != nil{
-                let controller = storyboard.instantiateViewController(withIdentifier: "HomeVC") as! UIViewController
-                self.window?.rootViewController = controller
-                self.window?.makeKeyAndVisible()
-            }
-            else{
-                let controller = storyboard.instantiateViewController(withIdentifier: "SignInVC") as! UIViewController
-                self.window?.rootViewController = controller
-                self.window?.makeKeyAndVisible()
-            }
-        }
-        
         return true
     }
+
+    // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
