@@ -12,6 +12,7 @@ import Foundation
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var NavigationItem: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController {
         self.view.window?.makeKeyAndVisible()
     }
     
-    @IBOutlet weak var userNameLabel: UILabel!
+    
     /*
     // MARK: - Navigation
 
