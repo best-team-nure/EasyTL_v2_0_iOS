@@ -19,11 +19,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var totalTests: UILabel!
     @IBOutlet weak var aCorrect: UILabel!
     @IBOutlet weak var aTime: UILabel!
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.userNameL.alpha = 0
         self.correctQuestions.alpha = 0
         self.totalQuestions.alpha = 0
@@ -31,10 +31,10 @@ class HomeViewController: UIViewController {
         self.totalTests.alpha = 0
         self.aCorrect.alpha = 0
         self.aTime.alpha = 0
-         
+
             let ref = Database.database().reference()
             let userID = Auth.auth().currentUser?.uid
-            
+
         ref.child(userID!).observe(.value, with: { (snapshot) in
             let dict = snapshot.value as? NSDictionary
             let username = dict!["Name"] as? String
@@ -48,9 +48,9 @@ class HomeViewController: UIViewController {
             let tests = dict!["tests"] as? [String:Any]
             let passedTests = tests!["passed"] as? Int
             let totalTests = tests!["total"] as? Int
-            
+
             let user = User(id:userID!, name:username!, topicProgress:passedTopics!, totalQuestions:totalQuestions!, correctQuestions:correctQuestions!, totalTests:totalTests!, passedTests:passedTests!, averageCorrectAnswers:averageCorrectAnswers!, averageTime:averageTime!)
-            
+
             self.userNameL.text = username
             self.userNameL.alpha = 1
             self.correctQuestions.text = String(user.correctQuestions)
@@ -67,11 +67,11 @@ class HomeViewController: UIViewController {
             self.aTime.alpha = 1
         })
     }
-    
+
     @IBAction func handleLogout(_ target: UIButton) {
         try! Auth.auth().signOut()
         let signInViewController = self.storyboard?.instantiateViewController(identifier : Constants.StoryboardOut.signInViewController) as? LoginViewController
-            
+
         self.view.window?.rootViewController = signInViewController
         self.view.window?.makeKeyAndVisible()
     }

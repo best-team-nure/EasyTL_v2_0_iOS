@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         topic.isHidden = true
         backButton.isHidden = true
         toTest.isHidden = true
-        
+        topic2.isHidden = true
      header.isHidden = false
         b1.isHidden = false
         b2.isHidden = false
