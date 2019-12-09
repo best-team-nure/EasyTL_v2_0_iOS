@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import Firebase
 
 class User {
     var id : String
     var name : String
     var topicProgress : Int
-    var totalQuestions : Int //for both
-    var correctQuestions : Int //for both
-    var numbOfTopics : Int // always equals 6
-    var totalTests : Int // quick only
-    var passedTests : Int // quick only
-    var averageCorrectAnswers : Int // quick only
-    var averageTime : Int // quick only. seconds
+    var totalQuestions : Int 
+    var correctQuestions : Int
+    var numbOfTopics : Int
+    var totalTests : Int
+    var passedTests : Int
+    var averageCorrectAnswers : Int
+    var averageTime : Int
     var topicNumber : Int
     
     //For initialization with 2 fields(Creating a new user)
@@ -36,8 +37,9 @@ class User {
         self.topicNumber = 0
     }
     
-    //For initialization with all the fields
-     init(id:String, name:String, topicProgress:Int, totalQuestions:Int, correctQuestions:Int, totalTests:Int, passedTests:Int, averageCorrectAnswers:Int, averageTime:Int, topicNumber:Int){
+    //For initialization with user profile fields
+     init(id:String, name:String, topicProgress:Int, totalQuestions:Int, correctQuestions:Int, totalTests:Int, passedTests:Int, averageCorrectAnswers:Int, averageTime:Int){
+        
         self.id = id
         self.name = name
         self.topicProgress = topicProgress
@@ -48,8 +50,7 @@ class User {
         self.passedTests = passedTests
         self.averageCorrectAnswers = averageCorrectAnswers
         self.averageTime = averageTime
-        self.topicNumber = topicNumber
+        self.topicNumber = topicProgress
     }
-    
     
 }
