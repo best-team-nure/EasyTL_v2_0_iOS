@@ -20,4 +20,9 @@ struct Constants{
         static let signInViewController = "SignInVC"
     }
     
+    struct StoryboardOutTwo{
+        
+        static let MainTabBarController = "MainTabBarController"
+    }
+    
 }

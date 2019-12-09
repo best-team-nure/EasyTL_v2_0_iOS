@@ -75,5 +75,11 @@ class HomeViewController: UIViewController {
         self.view.window?.rootViewController = signInViewController
         self.view.window?.makeKeyAndVisible()
     }
-   
+    
+    @IBAction func ToTheMain(_ sender: Any) {
+        let MainTabBarController = self.storyboard?.instantiateViewController(identifier : Constants.StoryboardOutTwo.MainTabBarController) as? ViewController
+
+        self.view.window?.rootViewController = MainTabBarController
+        self.view.window?.makeKeyAndVisible()
+    }
 }
