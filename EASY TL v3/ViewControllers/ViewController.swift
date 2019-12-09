@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
     
@@ -27,6 +28,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var topic: UITextView!
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var topic2: UIButton!
+    
+    @IBOutlet weak var Profile: UIButton!
+    
+    @IBAction func openUserProfile(_ sender: Any) {
+        
+        if Auth.auth().currentUser != nil {
+            
+          // User is signed in.
+          let homeViewController = storyboard?.instantiateViewController(identifier : Constants.Storyboard.homeViewController) as? HomeViewController
+                 
+                 view.window?.rootViewController = homeViewController
+                 view.window?.makeKeyAndVisible()
+        } else {
+          // User is not signed in
+        }
+    }
     
     func buttonsHide(){
         header.isHidden = true

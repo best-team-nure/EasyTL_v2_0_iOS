@@ -3,4 +3,130 @@
    uuid = "2C436C3D-DEEC-47C8-9EE7-3696FD46A160"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F127CDBF-F0A8-4584-9FAD-D095B3561751"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EASY TL v3/ViewControllers/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "SignUpViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EASY TL v3/ViewControllers/TopicViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "TopicViewControler"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823 - 9f72c147d17b7dd3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EASY_TL_v3.TopicViewControler.label.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "EASY TL v3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dara/Desktop/EasyTL_v2_0_iOS/EASY%20TL%20v3/ViewControllers/TopicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823 - 693c8ba29cecadcf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EASY_TL_v3.TopicViewControler.label.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "EASY TL v3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dara/Desktop/EasyTL_v2_0_iOS/EASY%20TL%20v3/ViewControllers/TopicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823 - 3f7605718483d1de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EASY_TL_v3.TopicViewControler.label.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "EASY TL v3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dara/Desktop/EasyTL_v2_0_iOS/EASY%20TL%20v3/ViewControllers/TopicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823 - 36680ed49aee577b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EASY_TL_v3.TopicViewControler.label.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "EASY TL v3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dara/Desktop/EasyTL_v2_0_iOS/EASY%20TL%20v3/ViewControllers/TopicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823 - 2246c5258b63623f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EASY_TL_v3.TopicViewControler.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; EASY_TL_v3.TopicViewControler"
+                  moduleName = "EASY TL v3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dara/Desktop/EasyTL_v2_0_iOS/EASY%20TL%20v3/ViewControllers/TopicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "258">
+               </Location>
+               <Location
+                  uuid = "3EE51C44-6F32-46A5-B1FF-677EE4D44823 - 345f3bfb1e259df3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EASY_TL_v3.TopicViewControler.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;EASY_TL_v3.TopicViewControler&gt;"
+                  moduleName = "EASY TL v3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dara/Desktop/EasyTL_v2_0_iOS/EASY%20TL%20v3/ViewControllers/TopicViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -86,6 +86,9 @@
                                 <state key="normal" title="Профиль">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="openUserProfile:" destination="9XB-x8-kbb" eventType="touchUpInside" id="m9g-r2-nWA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -120,6 +123,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Назад" largeTitleDisplayMode="never" id="1yV-Zy-P0D"/>
                     <connections>
+                        <outlet property="Profile" destination="0j7-GC-ymT" id="bfQ-sE-uRF"/>
                         <outlet property="loginButton" destination="FWj-mJ-mdu" id="BZe-mv-uhI"/>
                         <outlet property="signUpButton" destination="hTA-2o-iiA" id="csE-zU-vsd"/>
                         <segue destination="BYZ-38-t0r" kind="show" id="IiX-3K-XIc"/>
@@ -575,10 +579,12 @@
                         <outlet property="aCorrect" destination="pIn-4n-xES" id="VRT-Bf-eef"/>
                         <outlet property="aTime" destination="K4S-dM-G2L" id="hhF-MG-ng1"/>
                         <outlet property="correctQuestions" destination="PNj-W3-CF7" id="ydd-sz-QEW"/>
+                        <outlet property="out" destination="mbP-WQ-gh3" id="nAi-QQ-Adq"/>
                         <outlet property="passedTests" destination="0zy-CR-gCu" id="9WL-9K-ekI"/>
                         <outlet property="totalQuestions" destination="8tN-jx-rTP" id="qKd-af-nV2"/>
                         <outlet property="totalTests" destination="NKX-uS-ZMS" id="yGT-IE-cHc"/>
                         <outlet property="userNameL" destination="EhB-2o-Ww8" id="Zwv-4w-Tkg"/>
+                        <outlet property="Выйти" destination="mbP-WQ-gh3" id="36e-kI-ZPC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xBb-EB-Nkz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

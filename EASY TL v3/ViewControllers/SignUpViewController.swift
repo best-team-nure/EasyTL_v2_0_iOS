@@ -58,15 +58,6 @@ class SignUpViewController: UIViewController {
         
         //var ref:DatabaseReference?
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
         //Validate the fields
         let error = validateFields()
         

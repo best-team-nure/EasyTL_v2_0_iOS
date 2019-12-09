@@ -19,8 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var totalTests: UILabel!
     @IBOutlet weak var aCorrect: UILabel!
     @IBOutlet weak var aTime: UILabel!
-
-
+    @IBOutlet weak var out: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
